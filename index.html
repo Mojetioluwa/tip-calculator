@@ -4,82 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
   <title>Frontend Mentor | Tip calculator app</title>
 
 </head>
 <body>
-        <div class="logo">
-          <img src="images/logo.svg" alt="LOGO">
-        </div>
+  <div class="logo">
+    <img src="images/logo.svg" alt="LOGO">
+  </div>
 
-        <main>
+  <main>
 
-              <section id="input">
-                  <form>
-                      <label for="bill">
-                        Bill
-                      </label>
-                      <input type="number" name="bill" id="bill">
-                      <label for="tip">
-                          Select Tip
-                      </label>
-                      <input type="radio" name="tip" id="5">kl
-                      <input type="radio" name="tip" id="10">lkl
-                      <input type="radio" name="tip" id="15">klk
-                      <input type="radio" name="tip" id="25">kl
-                      <input type="radio" name="tip" id="50">ghghghg
-                  </form>
+    <section id="input">
 
-              </section>
+      <form>
 
-              <section id="output">
+        <label for="bill">Bill</label>
+        <input type="number" name="bill" id="bill" placeholder="0">
 
-              </section>
-        </main>
+        <fieldset for="tip">
+          <legend>Select Tip %</legend>
 
+          <input type="radio" name="tip" id="5"><label for="5">5%</label>
+          <input type="radio" name="tip" id="10"><label for="10">10%</label>
+          <input type="radio" name="tip" id="15"><label for="15">15%</label>
+          <input type="radio" name="tip" id="25"><label for="25">25%</label>
+          <input type="radio" name="tip" id="50"><label for="50">50%</label>
 
+          <input type="text" name="custom" id="custom" placeholder="Custom">
+        </fieldset>  
 
+        <label for="num-people">Number of People</label>  
+        <span class="err">Can't be zero</span>
+        <input type="number" min="1" name="num-people" id="num-people">
 
+      </form>
 
+    </section>
 
+    <section id="output">
 
+         <div class="value">
+           <div class="label">Tip Amount <span>/ person</span></div>
+           <div id="amount" class="number">$0.00</div>
+         </div>
 
+         <div class="value">
+           <div class="label">Total <span>/ person</span></div>
+           <div id=total class="number">$0.00</div>
+         </div>
 
+         <button>Reset</button>
 
+    </section>
 
+  </main>
 
-
-
-
-
-
-
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
 </html>
