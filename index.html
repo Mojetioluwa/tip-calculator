@@ -24,22 +24,22 @@
       <form>
 
         <label for="bill">Bill</label>
-        <input type="number" inputmode="number" min="1" name="bill" id="bill" placeholder="0">
+        <input type="number" oninput="Init()" inputmode="number" min="1" name="bill" id="bill" placeholder="0">
 
         <fieldset for="tip">
           <legend>Select Tip %</legend>
 
-          <input type="radio" name="tip" value="5" id="5"><label for="5">5%</label>
-          <input type="radio" name="tip" value="10" id="10"><label for="10">10%</label>
-          <input type="radio" name="tip" value="15" id="15"><label for="15">15%</label>
-          <input type="radio" name="tip" value="25" id="25"><label for="25">25%</label>
-          <input type="radio" name="tip" value="50" id="50"><label for="50">50%</label>
+          <input type="radio" onchange="Init()" name="tip" value="5" id="5"><label onclick="toggleDisable('custom','disable')" for="5">5%</label>
+          <input type="radio" onchange="Init()" name="tip" value="10" id="10"><label onclick="toggleDisable('custom','disable')" for="10">10%</label>
+          <input type="radio" onchange="Init()" name="tip" value="15" id="15"><label onclick="toggleDisable('custom','disable')" for="15">15%</label>
+          <input type="radio" onchange="Init()" name="tip" value="25" id="25"><label onclick="toggleDisable('custom','disable')" for="25">25%</label>
+          <input type="radio" onchange="Init()" name="tip" value="50" id="50"><label onclick="toggleDisable('custom','disable')" for="50">50%</label>
 
-          <input name="custom" id="custom" placeholder="Custom">
+          <input type="number" oninput="toggleDisable('tip','disable','custom'), Init()" inputmode="number" name="custom" id="custom" min="1" max="99" placeholder="Custom">
         </fieldset>  
 
         <label for="num-people">Number of People <span class="err">Can't be zero</span></label>  
-        <input type="number" inputmode="number" placeholder="0" min="1" name="num-people" id="num-people">
+        <input type="number" oninput="Init()" inputmode="number" placeholder="0" min="1" name="num-people" id="num-people">
 
       </form>
 
@@ -57,7 +57,7 @@
            <div class="number">$<span id=total>0.00</span></div>
          </div>
 
-         <button disabled>Reset</button>
+         <button id="reset" onclick="reset()" disabled>Reset</button>
 
     </section>
 
@@ -65,11 +65,13 @@
 
   
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">Frontend Mentor</a>.
      <br> 
-      Coded by <a href="https://github.com/kodaas">Ajala Fiyinfoluwa John</a>.
+      Coded by <a href="https://github.com/kodaas" rel="noreferrer">Ajala Fiyinfoluwa John</a>.
       <br>
-      <a href="https://github.com/kodaas/coming-soon_html_css#overview">GitHub Code</a>
+      <a href="https://github.com/kodaas/tip-calculator" rel="noreferrer">GitHub Code</a>
   </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
