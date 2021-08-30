@@ -66,15 +66,21 @@ main form input[inputmode="number"] {
     padding-right: .5rem;
 }
 
-main form input[inputmode="number"]::placeholder{color: #9db7b6}
+main form input[inputmode="number"]::placeholder {
+    color: #9db7b6
+}
 
-main form input[inputmode="number"]:nth-of-type(1) {margin-bottom: 2rem}
+main form input[inputmode="number"]:nth-of-type(1) {
+    margin-bottom: 2rem
+}
 
 main form input[inputmode="number"]:nth-of-type(2) {
     background-image: url(images/icon-person.svg);
 }
 
-main form fieldset {border: none}
+main form fieldset {
+    border: none
+}
 
 main form fieldset > input[type="radio"] {
     position: fixed;
@@ -94,17 +100,19 @@ main form fieldset > label {
     color: var(--grayish-cyan-light);
     font-size: 1.5rem;
     cursor: pointer;
-    
+
 }
 
 label:hover {
     opacity: .8;
 }
 
-main form fieldset > legend {margin-bottom: 1rem}
+main form fieldset > legend {
+    margin-bottom: 1rem
+}
 
 main form fieldset > input[type="radio"]:focus + label,
-main form fieldset > input[type="radio"]:checked + label{
+main form fieldset > input[type="radio"]:checked + label {
     background-color: var(--strong-cyan);
     color: var(--dark-cyan);
 }
@@ -127,7 +135,9 @@ main form fieldset > input[name="custom"] {
     outline-color: var(--strong-cyan);
 }
 
-main form fieldset > input[name="custom"]::placeholder {color: #465c5a}
+main form fieldset > input[name="custom"]::placeholder {
+    color: #465c5a
+}
 
 main form label[for="num-people"] {
     position: relative;
@@ -161,6 +171,7 @@ section#output div.value div.label {
     color: var(--white);
     font-weight: 600;
 }
+
 section#output div.value div.label > span {
     font-size: .8rem;
     color: var(--grayish-cyan);
@@ -188,17 +199,23 @@ section#output button {
     text-transform: uppercase;
 }
 
-section#output button:hover {background-color: #9fe8df;border-color: #9fe8df;}
+section#output button:hover {
+    background-color: #9fe8df;
+    border-color: #9fe8df;
+}
 
-section#output button:disabled {opacity: .4;cursor: not-allowed;}
+section#output button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
 
 section#output button:disabled:hover {
     background-color: var(--strong-cyan);
     border: 2px solid var(--strong-cyan);
 }
-
 .attribution {
-    font-size: 11px;
+    margin: 1.5rem 0;
+    font-size: .8rem;
     text-align: center;
 }
 
