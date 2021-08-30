@@ -213,6 +213,40 @@ section#output button:disabled:hover {
     background-color: var(--strong-cyan);
     border: 2px solid var(--strong-cyan);
 }
+
+@media (min-width: 1150px) {
+    main {
+        max-width: 60rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        column-gap: 1rem;
+    }
+
+    section#input {
+        width: 95%
+    }
+
+    section#output {
+        /*        width: 95%;*/
+        margin-top: 0;
+    }
+
+    main form fieldset > label,
+    main form fieldset > input[name="custom"] {
+        width: 8rem;
+    }
+    
+    main form fieldset > input[name="custom"] {
+        font-size: 1rem;
+        padding: .658rem 1.8rem;
+        background-position: 5.7rem center;
+        background-size: 30px 30px;
+
+    }
+}
+
+
 .attribution {
     margin: 1.5rem 0;
     font-size: .8rem;
