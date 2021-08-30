@@ -64,10 +64,12 @@ main form input[inputmode="number"] {
     background-position: 1rem center;
     margin-top: .3rem;
     padding-right: .5rem;
+    padding-left: 2.5rem;
 }
 
 main form input[inputmode="number"]::placeholder {
-    color: #9db7b6
+    color: #9db7b6;
+    font-weight: 400;
 }
 
 main form input[inputmode="number"]:nth-of-type(1) {
@@ -243,6 +245,14 @@ section#output button:disabled:hover {
         background-position: 5.7rem center;
         background-size: 30px 30px;
 
+    }
+    
+    section#output button {
+        margin: 7rem 0 0;
+    }
+    
+    section#output div.value div.number {
+        font-size: 2.5rem;
     }
 }
 
